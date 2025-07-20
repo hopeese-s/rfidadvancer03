@@ -12,13 +12,30 @@ const maleQueue = [];
 const femaleQueue = [];
 
 function convertRoom(room) {
-  room = room.trim().toLowerCase();
-  if (/^a([1-4])/.test(room)) return `อนุบาล ${room[1]}`;
-  if (/^1[a-d]/.test(room)) return "ป.1";
-  if (/^2[a-d]/.test(room)) return "ป.2";
-  if (/^([3-6])([a-d])/.test(room)) return `ป.${room[0]}`;
-  if (/^(1[0-2])/.test(room)) return `ม.${parseInt(room) - 6}`;
-  return room;
+  const original = room.trim();
+  const lower = original.toLowerCase();
+
+  // อนุบาล (a1-a4)
+  if (/^a([1-4])[a-z]?$/i.test(original)) {
+    const n = original.match(/^a([1-4])[a-z]?$/i)[1];
+    return `อนุบาล ${n}`;
+  }
+  // ป.1-ป.6 (1A-6D)
+  if (/^([1-6])[a-z]$/i.test(original)) {
+    const n = original.match(/^([1-6])[a-z]$/i)[1];
+    return `ป.${n}`;
+  }
+  // ม.1-ม.3 (7A-9D และ 7A-9)
+  if (/^([7-9])[a-z]?$/.test(original)) {
+    const n = Number(original.match(/^([7-9])[a-z]?$/)[1]);
+    return `ม.${n - 6}`;
+  }
+  // ม.4-6 (10A-12D หรือ 10-12)
+  if (/^(1[0-2])[a-z]?$/i.test(original)) {
+    const n = Number(original.match(/^(1[0-2])[a-z]?$/i)[1]);
+    return `ม.${n - 6}`;
+  }
+  return original;
 }
 
 function readStudentsCSV() {
