@@ -25,7 +25,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
-const API_URL = 'https://rfid-backend-xxxx.onrender.com'; // เปลี่ยนตาม backend จริง
+const API_URL = 'https://rfidadvancer03.onrender.com'; // เปลี่ยนตาม backend จริง
 
 function LatestList({ type, onBack }) {
   const [queue, setQueue] = useState([]);
