@@ -202,7 +202,7 @@ function SpecPage({ onBack }) {
               🔧 Hardware
             </Typography>
             <Typography>• Raspberry Pi</Typography>
-            <Typography>• RFID Reader</Typography>
+            <Typography>• UHF RFID Reader</Typography>
             <Typography>• Python Integration</Typography>
             <Typography>• WiFi Network</Typography>
           </CardContent>
@@ -228,9 +228,9 @@ function InfoPage({ onBack }) {
           </Avatar>
           <Typography variant="h5" gutterBottom>RFID Cloud System</Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            ระบบสแกนบัตร RFID แบบ Real-time
+            ระบบสแกนบัตร RFID ในรถแบบ Real-time เพื่อง่ายต่อการประกาศชื่อ
           </Typography>
-          <Chip label="Version 1.0" sx={{ bgcolor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+          <Chip label="Version 1.3" sx={{ bgcolor: 'rgba(255,255,255,0.2)', color: 'white' }} />
           <Box sx={{ mt: 3 }}>
             <Typography variant="body2">
               🚀 Deployed on Render
@@ -239,7 +239,7 @@ function InfoPage({ onBack }) {
               💻 Built with React + Node.js
             </Typography>
             <Typography variant="body2">
-              🤖 Powered by Claude AI
+              🤖 Powered by Hopeese
             </Typography>
           </Box>
         </CardContent>
@@ -276,7 +276,7 @@ export default function App() {
   const renderHome = () => (
     <Container maxWidth="sm" sx={{ textAlign: 'center', mt: 8 }}>
       <Typography variant="h2" gutterBottom sx={{ fontWeight: 900, mb: 6, background: 'linear-gradient(45deg, #667eea 0%, #764ba2 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-        🎯 RFID Cloud System
+        🎯 Choose One
       </Typography>
       
       <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mb: 6, flexWrap: 'wrap' }}>
