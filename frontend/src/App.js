@@ -19,7 +19,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
 import SchoolIcon from '@mui/icons-material/School';
 
-const API_URL = 'http://192.168.1.176:4000'; // เปลี่ยนเป็น URL backend จริง
+const API_URL = 'https://rfidadvancer03.onrender.com'; // เปลี่ยนเป็น URL backend จริง
 
 function LatestList({ type, onBack }) {
   const [queue, setQueue] = useState([]);
