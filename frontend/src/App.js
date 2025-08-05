@@ -342,7 +342,7 @@ export default function App() {
           <Divider sx={{ mt: 2 }} />
           <Box sx={{ p: 2, textAlign: 'center' }}>
             <Typography variant="caption" color="textSecondary">
-              Version 1.0 | Made with ❤️
+              Version 1.3 | Made with Loveeeeeeeeeelyheart❤️
             </Typography>
           </Box>
         </Box>
